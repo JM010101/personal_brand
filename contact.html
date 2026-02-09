@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact John Smith for speaking engagements, consulting services, or general inquiries. Get in touch today to discuss your needs.">
+    <meta name="keywords" content="contact, inquiry, speaking booking, consulting, get in touch">
+    <meta name="author" content="John Smith">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.example.com/contact.html">
+    <meta property="og:title" content="Contact - John Smith">
+    <meta property="og:description" content="Contact John Smith for speaking engagements, consulting services, or general inquiries.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://www.example.com/contact.html">
+    <meta property="twitter:title" content="Contact - John Smith">
+    <meta property="twitter:description" content="Contact John Smith for speaking engagements, consulting services, or general inquiries.">
+    
+    <title>Contact - John Smith | Get In Touch</title>
+    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "mainEntity": {
+            "@type": "Person",
+            "name": "John Smith",
+            "email": "contact@example.com"
+        }
+    }
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="index.html" class="logo" aria-label="John Smith Home">
+                        <span class="logo-text">John Smith</span>
+                    </a>
+                    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="main-menu">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </button>
+                    <ul class="nav-menu" id="main-menu" role="menubar">
+                        <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                        <li role="none"><a href="about.html" role="menuitem">About</a></li>
+                        <li role="none"><a href="speaking.html" role="menuitem">Speaking</a></li>
+                        <li role="none"><a href="services.html" role="menuitem">Services</a></li>
+                        <li role="none"><a href="testimonials.html" role="menuitem">Testimonials</a></li>
+                        <li role="none"><a href="contact.html" role="menuitem" aria-current="page">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Page Header -->
+        <section class="page-header" aria-labelledby="page-heading">
+            <div class="container">
+                <h1 id="page-heading">Get In Touch</h1>
+                <p class="page-subtitle">Let's discuss how I can help you achieve your goals</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section section-padding" aria-labelledby="contact-heading">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h2 id="contact-heading">Contact Information</h2>
+                        <p>I'd love to hear from you. Whether you're interested in booking a speaking engagement, exploring consulting services, or have a general inquiry, I'm here to help.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <h3>Email</h3>
+                                <p><a href="mailto:contact@example.com">contact@example.com</a></p>
+                            </div>
+                            <div class="contact-item">
+                                <h3>Phone</h3>
+                                <p><a href="tel:+1234567890">+1 (234) 567-8900</a></p>
+                            </div>
+                            <div class="contact-item">
+                                <h3>Office Hours</h3>
+                                <p>Monday - Friday: 9:00 AM - 5:00 PM EST</p>
+                            </div>
+                        </div>
+
+                        <div class="social-contact">
+                            <h3>Connect on Social Media</h3>
+                            <ul class="social-links">
+                                <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+                                <li><a href="#" aria-label="Twitter">Twitter</a></li>
+                                <li><a href="#" aria-label="Email">Email</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <h2>Send a Message</h2>
+                        <form id="contact-form" class="contact-form" novalidate aria-label="Contact form">
+                            <div class="form-group">
+                                <label for="name">Name <span class="required" aria-label="required">*</span></label>
+                                <input type="text" id="name" name="name" required aria-required="true" aria-describedby="name-error">
+                                <span id="name-error" class="error-message" role="alert" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email <span class="required" aria-label="required">*</span></label>
+                                <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-error">
+                                <span id="email-error" class="error-message" role="alert" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" aria-describedby="phone-error">
+                                <span id="phone-error" class="error-message" role="alert" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject <span class="required" aria-label="required">*</span></label>
+                                <select id="subject" name="subject" required aria-required="true" aria-describedby="subject-error">
+                                    <option value="">Select a subject</option>
+                                    <option value="speaking">Speaking Engagement</option>
+                                    <option value="consulting">Consulting Services</option>
+                                    <option value="coaching">Executive Coaching</option>
+                                    <option value="workshop">Workshop/Training</option>
+                                    <option value="other">Other Inquiry</option>
+                                </select>
+                                <span id="subject-error" class="error-message" role="alert" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message <span class="required" aria-label="required">*</span></label>
+                                <textarea id="message" name="message" rows="6" required aria-required="true" aria-describedby="message-error"></textarea>
+                                <span id="message-error" class="error-message" role="alert" aria-live="polite"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                            </div>
+
+                            <div id="form-success" class="success-message" role="alert" aria-live="polite" style="display: none;">
+                                Thank you for your message! I'll get back to you as soon as possible.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section (Placeholder) -->
+        <section class="map-section" aria-label="Location map">
+            <div class="map-placeholder">
+                <p>Map placeholder - Integrate with Google Maps or similar service</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>John Smith</h3>
+                    <p>Speaker, Author & Thought Leader</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="speaking.html">Speaking</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul class="social-links">
+                        <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+                        <li><a href="#" aria-label="Twitter">Twitter</a></li>
+                        <li><a href="#" aria-label="Email">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 John Smith. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/form-handler.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

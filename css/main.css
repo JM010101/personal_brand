@@ -1094,6 +1094,41 @@ blockquote {
 }
 
 /* ============================================
+   Image Loading States
+   ============================================ */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+img.loading {
+    opacity: 0.7;
+    background-color: var(--color-bg-light);
+}
+
+img.loaded {
+    opacity: 1;
+    transition: opacity var(--transition-base);
+}
+
+img.error {
+    opacity: 0.5;
+    background-color: var(--color-bg-light);
+    position: relative;
+}
+
+img.error::after {
+    content: 'Image unavailable';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-text-light);
+    font-size: var(--font-size-sm);
+}
+
+/* ============================================
    Screen Reader Only
    ============================================ */
 .sr-only {

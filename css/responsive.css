@@ -1,0 +1,397 @@
+/* ============================================
+   Responsive Styles
+   Mobile-First Approach
+   ============================================ */
+
+/* ============================================
+   Mobile Navigation
+   ============================================ */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: var(--color-bg);
+        flex-direction: column;
+        padding: var(--spacing-lg);
+        box-shadow: var(--shadow-lg);
+        transform: translateX(-100%);
+        transition: transform var(--transition-base);
+        z-index: 999;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+    }
+
+    .nav-menu.active {
+        transform: translateX(0);
+    }
+
+    .nav-menu li {
+        width: 100%;
+    }
+
+    .nav-menu a {
+        display: block;
+        width: 100%;
+        padding: var(--spacing-md);
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav-menu a:last-child {
+        border-bottom: none;
+    }
+
+    /* Hamburger animation */
+    .mobile-menu-toggle[aria-expanded="true"] .hamburger:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .mobile-menu-toggle[aria-expanded="true"] .hamburger:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-toggle[aria-expanded="true"] .hamburger:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+}
+
+/* ============================================
+   Tablet Styles (769px - 1024px)
+   ============================================ */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+
+    .hero h1 {
+        font-size: var(--font-size-4xl);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-lg);
+    }
+
+    .value-grid,
+    .featured-grid,
+    .topics-grid,
+    .events-grid,
+    .services-list,
+    .testimonials-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .about-image {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   Mobile Styles (320px - 768px)
+   ============================================ */
+@media (max-width: 768px) {
+    :root {
+        --container-padding: 1rem;
+        --spacing-3xl: 3rem;
+    }
+
+    html {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 0 var(--container-padding);
+    }
+
+    /* Typography adjustments */
+    h1 {
+        font-size: var(--font-size-3xl);
+    }
+
+    h2 {
+        font-size: var(--font-size-2xl);
+    }
+
+    h3 {
+        font-size: var(--font-size-xl);
+    }
+
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    /* Hero section */
+    .hero {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .hero h1 {
+        font-size: var(--font-size-3xl);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-base);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+    }
+
+    /* Sections */
+    .section-padding {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .page-header {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .page-header h1 {
+        font-size: var(--font-size-3xl);
+    }
+
+    .page-subtitle {
+        font-size: var(--font-size-lg);
+    }
+
+    /* Grids - single column on mobile */
+    .value-grid,
+    .featured-grid,
+    .topics-grid,
+    .events-grid,
+    .services-list,
+    .testimonials-list,
+    .cases-grid,
+    .credentials-grid,
+    .process-steps,
+    .media-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+
+    /* Cards */
+    .value-card,
+    .featured-card,
+    .topic-card,
+    .event-card,
+    .service-card,
+    .testimonial-card,
+    .case-card,
+    .credential-card {
+        padding: var(--spacing-md);
+    }
+
+    /* About page */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .about-image {
+        max-width: 100%;
+    }
+
+    /* Contact page */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .contact-form {
+        padding: var(--spacing-lg);
+    }
+
+    /* CTA buttons */
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    /* Process steps */
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: var(--font-size-xl);
+    }
+
+    /* Map */
+    .map-placeholder {
+        height: 300px;
+    }
+}
+
+/* ============================================
+   Small Mobile Styles (320px - 480px)
+   ============================================ */
+@media (max-width: 480px) {
+    :root {
+        --spacing-3xl: 2rem;
+        --spacing-2xl: 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: var(--font-size-2xl);
+    }
+
+    .section-title {
+        font-size: var(--font-size-xl);
+    }
+
+    .value-icon,
+    .service-icon {
+        font-size: 2rem;
+    }
+
+    .logos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   Large Desktop Styles (1025px+)
+   ============================================ */
+@media (min-width: 1025px) {
+    .value-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .topics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cases-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .process-steps {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+@media print {
+    .header,
+    .footer,
+    .mobile-menu-toggle,
+    .btn,
+    .cta-section,
+    .map-section {
+        display: none;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+        background: #fff;
+    }
+
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    .section-padding {
+        padding: 1rem 0;
+    }
+}
+
+/* ============================================
+   Reduced Motion (Accessibility)
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ============================================
+   High Contrast Mode (Accessibility)
+   ============================================ */
+@media (prefers-contrast: high) {
+    :root {
+        --color-border: #000000;
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn {
+        border-width: 3px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        border-width: 2px;
+    }
+}
